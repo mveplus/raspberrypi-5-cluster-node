@@ -5,27 +5,6 @@ The setup includes NVMe SSD boot, RTC battery configuration, and remote console 
 
 ---
 
-## 🧾 Bill of Materials (BoM)
-
-| Item | Description | Qty | Unit Price |
-|------|-------------|-----|-------------|
-| **Raspberry Pi 5 (8 GB)** | Main compute board | 1 | £76.80 |
-| **RTC Battery for Raspberry Pi 5** | Real-Time Clock backup battery | 1 | £4.80 |
-| **Raspberry Pi SSD (512 GB)** | Official Raspberry Pi M.2 SSD | 1 | £43.20 |
-| **Raspberry Pi 5 PCIe → M.2 with PoE HAT+ (B)** | High-speed NVMe adapter + PoE support (IceCrab / AliExpress) | 1 | £18.21 |
-
-* **Shipping:** £7.40
-* **PoE NVME HAT+** free shipping  
-
-
----
-
-### 📦 Suppliers
-- **The Pi Hut (UK)** — [thepihut.com](https://thepihut.com)  
-- **IceCrab Store (China)** — via [AliExpress](https://www.aliexpress.com/item/1005008155659837.html)  
-
----
-
 ## 🔧 Hardware Setup Overview  
 
 I’m starting with a **single-node** setup for initial testing before expanding to a **mini cluster**.  
@@ -219,6 +198,24 @@ After successful NVMe boot:
   → [Official guide](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#enable-battery-charging)  
 - Enabled **battery alarm wake-up** from halt.  
 - Verified RTC retains time across full power loss.
+
+---
+
+## 🧾 Bill of Materials (BoM)
+
+| Item | Description | Qty | Unit Price |
+|------|-------------|-----|-------------|
+| **Raspberry Pi 5 (8 GB)** | Main compute board | 1 | £76.80 |
+| **RTC Battery for Raspberry Pi 5** | Real-Time Clock backup battery | 1 | £4.80 |
+| **Raspberry Pi SSD (512 GB)** | Official Raspberry Pi M.2 SSD | 1 | £43.20 |
+| **Raspberry Pi 5 PCIe → M.2 with PoE HAT+ (B)** | High-speed NVMe adapter + PoE support (IceCrab / AliExpress) | 1 | £18.21 |
+
+* **Shipping:** £7.40
+* **PoE NVME HAT+** free shipping
+
+### 📦 Suppliers
+- **The Pi Hut (UK)** — [thepihut.com](https://thepihut.com)
+- **IceCrab Store (China)** — via [AliExpress](https://www.aliexpress.com/item/1005008155659837.html)
 
 ---
 
