@@ -125,7 +125,7 @@ Once NVMe was stable, I cloned the OS to the NVMe drive.
 - **Raspberry Pi Imager CLI (v2.0.0-rc3)**  
   → [Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage](https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.0-rc3/Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage)
 - **Raspberry Pi OS Lite (ARM64)** (2025-10-02):  
-  [raspios_lite_arm64-2025-10-02](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-10-02/)
+  → [raspios_lite_arm64-2025-10-02](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-10-02/)
 
 **Example command:**
 ```bash
@@ -173,7 +173,7 @@ Performing periodic sync at 4194304 bytes written ( 4194304 bytes since last syn
 Periodic sync completed successfully
 Performing periodic sync at 109051904 bytes written ( 104857600 bytes since last sync, 1812 ms elapsed) on "Linux"
 Periodic sync completed successfully
-[ ..... removed ..... ] 
+</ ..... removed ..... /> 
 Performing periodic sync at 2835349504 bytes written ( 104857600 bytes since last sync, 1276 ms elapsed) on "Linux"
 Periodic sync completed successfully
 Hash of uncompressed image: "687005a17400459b1550a0612d7275b4b3bfb3bdaf2473e0958f1fd53120897a"
@@ -239,5 +239,5 @@ After successful NVMe boot:
 
 ---
 
-© 2025 Martin Lambev · Raspberry Pi 5 PoE Cluster Project
+2025 · Raspberry Pi 5 PoE Cluster Project
 
