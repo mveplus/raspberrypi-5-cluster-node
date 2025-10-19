@@ -22,7 +22,7 @@ The setup includes NVMe SSD boot, RTC battery configuration, and remote console 
 
 ### 📦 Suppliers
 - **The Pi Hut (UK)** — [thepihut.com](https://thepihut.com)  
-- **IceCrab Store (China)** — via [AliExpress](https://www.aliexpress.com)  
+- **IceCrab Store (China)** — via [AliExpress](https://www.aliexpress.com/item/1005008155659837.html)  
 
 ---
 
