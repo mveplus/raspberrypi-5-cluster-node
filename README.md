@@ -7,18 +7,15 @@ The setup includes NVMe SSD boot, RTC battery configuration, and remote console 
 
 ## 🧾 Bill of Materials (BoM)
 
-| Item | Description | Qty | Unit Price | Total |
-|------|-------------|-----|-------------|--------|
-| **Raspberry Pi 5 (8 GB)** | Main compute board | 1 | £76.80 | £76.80 |
-| **RTC Battery for Raspberry Pi 5** | Real-Time Clock backup battery | 1 | £4.80 | £4.80 |
-| **Raspberry Pi SSD (512 GB)** | Official Raspberry Pi M.2 SSD | 1 | £43.20 | £43.20 |
-| **RP2350 Zero Mini Development Board** | Waveshare RP2350-based microcontroller board | 2 | £4.60 | £9.20 |
-| **Raspberry Pi 5 PCIe → M.2 with PoE HAT+ (B)** | High-speed NVMe adapter + PoE support (IceCrab / AliExpress) | 1 | £18.21 | £18.21 |
+| Item | Description | Qty | Unit Price |
+|------|-------------|-----|-------------|
+| **Raspberry Pi 5 (8 GB)** | Main compute board | 1 | £76.80 |
+| **RTC Battery for Raspberry Pi 5** | Real-Time Clock backup battery | 1 | £4.80 |
+| **Raspberry Pi SSD (512 GB)** | Official Raspberry Pi M.2 SSD | 1 | £43.20 |
+| **Raspberry Pi 5 PCIe → M.2 with PoE HAT+ (B)** | High-speed NVMe adapter + PoE support (IceCrab / AliExpress) | 1 | £18.21 |
 
 * **Shipping:** £7.40
 * **PoE NVME HAT+** free shipping  
-* **VAT (20%):** £23.56  
-**Grand Total:** **£159.61 GBP**  
 
 
 ---
