@@ -16,7 +16,7 @@ The setup includes NVMe SSD boot, RTC battery configuration, and remote console 
 | **Raspberry Pi 5 PCIe → M.2 with PoE HAT+ (B)** | High-speed NVMe adapter + PoE support (IceCrab / AliExpress) | 1 | £18.21 | £18.21 |
 
 **Shipping:** £7.40 
-**PoE NVME HAT+ free shipping**  
+**PoE NVME HAT+** free shipping  
 **VAT (20%):** £23.56  
 **Grand Total:** **£159.61 GBP**  
 
