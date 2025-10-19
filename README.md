@@ -225,7 +225,7 @@ After successful NVMe boot:
 ## 🔗 References
 - [Waveshare PoE M.2 HAT (B) – NVMe SSD Boot](https://www.waveshare.com/wiki/PoE_M.2_HAT+_(B)#NVMe_SSD_boot)  
 - [Raspberry Pi Documentation – Enable Battery Charging](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#enable-battery-charging)  
-- [JetKVM Web Console](https://app.jetkvm.com)  
+- [JetKVM Web Console](https://jetkvm.com)  
 - [Raspberry Pi Imager CLI v2.0.0-rc3](https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.0-rc3/Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage)  
 - [Raspberry Pi OS Lite 2025-10-02 (ARM64)](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-10-02/)
 
