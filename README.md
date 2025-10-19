@@ -44,7 +44,7 @@ I’m starting with a **single-node** setup for initial testing before expanding
 ## 🌐 Network & Hardware Diagram
 ```text
           ┌────────────────────────────┐
-          │     JetKVM Console         │
+          │     JetKVM Console temp    │
           │  (Keyboard / HDMI / Web)   │
           └────────────┬───────────────┘
                        │ USB2 + HDMI
@@ -106,7 +106,7 @@ For setup, I used a **JetKVM** device for full remote access:
 
 ---
 
-### ⚙️ PCIe & NVMe Configuration
+### ⚙️  PCIe & NVMe Configuration
 When testing the **Waveshare PoE M.2 HAT (B)**:
 - **PCIe Gen 3** caused instability and incomplete NVMe detection.  
 - Switching to **PCIe Gen 2** resolved it and the NVMe was detected successfully.
@@ -129,15 +129,19 @@ Once NVMe was stable, I cloned the OS to the NVMe drive.
 
 **Example command:**
 ```bash
+# Download rpi-cli
 wget https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.0-rc3/Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage
+# Downlaod the Trixie image and checksum
 wget https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-10-02/2025-10-01-raspios-trixie-arm64-lite.img.xz
 wget https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2025-10-02/2025-10-01-raspios-trixie-arm64-lite.img.xz.sha256
+# Verify the image
 sha256sum -c 2025-10-01-raspios-trixie-arm64-lite.img.xz.sha256 
 2025-10-01-raspios-trixie-arm64-lite.img.xz: OK
 
+# write the image from SD card OS to NVMe disk:
 chmod +x Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage
-sudo ./Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage ./2025-10-01-raspios-trixie-arm64-lite.img.xz /dev/nvme0n1
 sudo ./Raspberry_Pi_Imager-2.0.0-cli-aarch64.AppImage ./2025-10-01-raspios-trixie-arm64-lite.img.xz /dev/nvme0n1 --debug
+
 Loading cache settings:
   Caching enabled: true
   Last file name: ""
@@ -169,56 +173,7 @@ Performing periodic sync at 4194304 bytes written ( 4194304 bytes since last syn
 Periodic sync completed successfully
 Performing periodic sync at 109051904 bytes written ( 104857600 bytes since last sync, 1812 ms elapsed) on "Linux"
 Periodic sync completed successfully
-Performing periodic sync at 213909504 bytes written ( 104857600 bytes since last sync, 459 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 318767104 bytes written ( 104857600 bytes since last sync, 352 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 423624704 bytes written ( 104857600 bytes since last sync, 354 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 528482304 bytes written ( 104857600 bytes since last sync, 351 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 633339904 bytes written ( 104857600 bytes since last sync, 1133 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 738197504 bytes written ( 104857600 bytes since last sync, 1526 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 843055104 bytes written ( 104857600 bytes since last sync, 1071 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 947912704 bytes written ( 104857600 bytes since last sync, 702 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1052770304 bytes written ( 104857600 bytes since last sync, 360 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1157627904 bytes written ( 104857600 bytes since last sync, 820 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1262485504 bytes written ( 104857600 bytes since last sync, 1324 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1367343104 bytes written ( 104857600 bytes since last sync, 1319 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1472200704 bytes written ( 104857600 bytes since last sync, 1773 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1577058304 bytes written ( 104857600 bytes since last sync, 1720 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1681915904 bytes written ( 104857600 bytes since last sync, 732 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1786773504 bytes written ( 104857600 bytes since last sync, 1613 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1891631104 bytes written ( 104857600 bytes since last sync, 1460 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 1996488704 bytes written ( 104857600 bytes since last sync, 1075 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2101346304 bytes written ( 104857600 bytes since last sync, 1840 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2206203904 bytes written ( 104857600 bytes since last sync, 2470 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2311061504 bytes written ( 104857600 bytes since last sync, 1518 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2415919104 bytes written ( 104857600 bytes since last sync, 1161 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2520776704 bytes written ( 104857600 bytes since last sync, 1794 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2625634304 bytes written ( 104857600 bytes since last sync, 1994 ms elapsed) on "Linux"
-Periodic sync completed successfully
-Performing periodic sync at 2730491904 bytes written ( 104857600 bytes since last sync, 1632 ms elapsed) on "Linux"
-Periodic sync completed successfully
+[ ..... removed ..... ] 
 Performing periodic sync at 2835349504 bytes written ( 104857600 bytes since last sync, 1276 ms elapsed) on "Linux"
 Periodic sync completed successfully
 Hash of uncompressed image: "687005a17400459b1550a0612d7275b4b3bfb3bdaf2473e0958f1fd53120897a"
@@ -235,7 +190,8 @@ CacheManager destructor: cleaning up background thread
 CacheManager destructor: cleanup complete
 Cancelling running thread in ImageWriter destructor
 Ejecting drive:  "BIWIN-CE430T5D100-512G-2534093201986"
-# check disk structure: 
+
+# Check disk structure: 
 sudo lsblk -f
 NAME        FSTYPE FSVER LABEL  UUID                                 FSAVAIL FSUSE% MOUNTPOINTS
 loop0       swap   1                                                                
